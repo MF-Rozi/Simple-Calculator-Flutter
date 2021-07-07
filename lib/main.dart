@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -68,6 +69,7 @@ class _MyAppState extends State<MyApp> {
                   padding: EdgeInsets.all(2),
                   child: Center(
                     child: Row(
+
                       children: [
                         FloatingActionButton(
                           onPressed: () => Calculate('+'),
@@ -91,10 +93,7 @@ class _MyAppState extends State<MyApp> {
                         ),
                         FloatingActionButton(
                           onPressed: () => Calculate('/'),
-                          child: Text(
-                            "/",
-                            style: TextStyle(fontSize: 20),
-                          ),
+                          child: Icon(CupertinoIcons.divide)
                         )
                       ],
                     ),
