@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        title: Text("Kalkulator Sederhana///"),
+        title: Text("Kalkulator Sederhana"),
         backgroundColor: Color.fromRGBO(0, 200, 0, 100),
       ),
       floatingActionButton: FloatingActionButton(
@@ -69,35 +69,28 @@ class _MyAppState extends State<MyApp> {
                   padding: EdgeInsets.all(2),
                   child: Center(
                     child: Row(
-
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         FloatingActionButton(
                           onPressed: () => Calculate('+'),
                           child: Icon(Icons.add),
                         ),
-                        SizedBox(
-                          width: 50,
-                        ),
                         FloatingActionButton(
                             onPressed: () => Calculate('-'),
-                            child: Icon(Icons.remove)),
-                        SizedBox(
-                          width: 50,
+                            child: Icon(Icons.remove)
                         ),
                         FloatingActionButton(
                           onPressed: () => Calculate('*'),
                           child: Icon(Icons.clear),
                         ),
-                        SizedBox(
-                          width: 50,
-                        ),
                         FloatingActionButton(
                           onPressed: () => Calculate('/'),
                           child: Icon(CupertinoIcons.divide)
-                        )
+                        ),
                       ],
                     ),
-                  )),
+                  )
+              ),
               Text(
                 "Hasil dari Operasi  $operasi :",
                 style: Theme.of(context).textTheme.headline6,
